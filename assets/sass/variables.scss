@@ -1,3 +1,43 @@
+:root {
+  --nav-height: 6rem;
+  --screen-max-width: 1280px;
+
+  --white: #ffffff;
+  --white-soft: #f8f8f8;
+  --white-mute: #f2f2f2;
+
+  --black: #181818;
+  --black-soft: #222222;
+  --black-mute: #282828;
+
+  --indigo: #2c3e50;
+
+  --divider-light-1: rgba(60, 60, 60, 0.29);
+  --divider-light-2: rgba(60, 60, 60, 0.12);
+  --divider-dark-1: rgba(84, 84, 84, 0.65);
+  --divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --text-light-1: var(--indigo);
+  --text-light-2: rgba(60, 60, 60, 0.66);
+  --text-dark-1: var(--white);
+  --text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --point-color: hsla(160, 100%, 37%, 1);
+
+  // font
+  --h1-font-size: 2.8rem;
+  --h2-font-size: 2.4rem;
+  --h3-font-size: 2.2rem;
+  --normal-font-size: 1.6rem;
+  --small-font-size: 1.4rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  // layout 
+  --padding-basic: 2.4rem;
+}
+
 // Purple color
 $dave-primary: #554BEC;
 $dave-purple-50: #F3F3F9;

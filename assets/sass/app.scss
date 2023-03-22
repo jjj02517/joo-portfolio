@@ -3,8 +3,6 @@
 // @import '/assets/base.css';
 @import './variables.scss';
 
-$dp__font_size: 1.3rem !default;
-
 @font-face {
   font-family: 'Pretendard';
   src: url('/assets/fonts/Pretendard-Thin.woff') format('woff');
@@ -69,388 +67,6 @@ $dp__font_size: 1.3rem !default;
   font-display: swap;
 }
 
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 1.4rem;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 3.8rem;
-  line-height: 1.4;
-}
-
-h3 {
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input,
-select,
-textarea {
-  border: 1px solid $dave-gray-400;
-  border-radius: 5px;
-  padding: 14px 12px;
-  font-size: 1.4rem;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border: 1px solid $dave-primary !important;
-  outline: none;
-}
-
-input,
-select {
-  width: 100%;
-  min-height: 36px;
-
-  &.large {
-    height: 48px;
-  }
-
-  &.small {
-    height: 36px;
-    padding: 5px 25px 5px 12px;
-  }
-}
-
-input.search {
-  padding: 14px 48px 14px 12px;
-  background: url('/assets/images/search-icon.svg') no-repeat right 15px center;
-}
-
-input:read-only {
-  background: $dave-gray-100;
-  border: 1px solid $dave-gray-300;
-  cursor: not-allowed;
-}
-
-input.error {
-  border: 1px solid $dave-warning !important;
-}
-
-select {
-  appearance: none;
-  padding: 14px 25px 14px 12px;
-  // background: white url('@/assets/images/chevron-right.svg') no-repeat right 8px center;
-  outline: none;
-
-  option {
-    &:disabled {
-      color: $dave-gray-500;
-    }
-  }
-}
-
-textarea {
-  width: 100%;
-  height: 168px;
-  resize: none;
-  overflow: auto;
-}
-
-button {
-  cursor: pointer;
-}
-
-table {
-
-  border: 1px solid $dave-gray-300;
-
-  thead {
-    background-color: white;
-    color: $dave-gray-800;
-    text-align: center;
-    height: 64px;
-  }
-
-  td,
-  th {
-    padding: 6px;
-    text-align: center;
-    background-color: white;
-  }
-
-  th {
-    font-weight: 700;
-  }
-
-  td {
-    min-width: 50px;
-  }
-
-  input {
-    min-height: 36px;
-    padding: 8px 12px;
-  }
-
-  select {
-    min-height: 36px;
-    padding: 8px 25px 8px 10px;
-  }
-}
-
-// 판매자 홈 전용 css
-.sales-layout {
-
-  input,
-  select,
-  textarea {
-    border: 1px solid $dave-gray-300;
-  }
-}
-
-// 검색 input
-.search-input-wrap {
-  position: relative;
-  height: 36px;
-
-  .search {
-    width: 100%;
-    height: 100%;
-    background: none;
-  }
-
-  .search-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 36px;
-    height: 100%;
-    background-image: utilIcon(icon-search, '8B95A1');
-    background-repeat: no-repeat;
-    background-position: center;
-    text-indent: -9999px;
-  }
-}
-
-// Vue Select custom
-.style-chooser {
-  background-color: #fff;
-  border: 1px solid $dave-gray-400;
-  border-radius: 4px;
-
-  &.vs--open {
-    border: 1px solid $dave-primary !important;
-    border-radius: 4px;
-
-    .vs__actions {
-      transform: rotate(180deg);
-
-    }
-  }
-
-  .vs__actions {
-    width: 12px;
-    height: 7px;
-    // background: white url('@/assets/images/chevron-right.svg') no-repeat right center;
-    transition: rotate 1s;
-
-    svg {
-      display: none;
-    }
-  }
-
-  // select input
-  .vs__dropdown-toggle {
-    width: 100%;
-    min-height: 5.6rem;
-    height: auto;
-    padding: 0 1.8rem;
-    align-items: center;
-    border: 0;
-
-    .vs__search {
-      padding: 0;
-      border: 0;
-      color: $dave-gray-600;
-      font-size: $dave-typo-9;
-
-
-      &:focus {
-        border: 0 !important;
-      }
-
-      &::placeholder {
-        font-size: $dave-typo-9;
-        color: $dave-gray-500;
-      }
-    }
-
-    .vs__selected-options {
-      padding: 0.6rem 0;
-
-      .vs__selected {
-        height: 3.6rem;
-        padding: 0 1.6rem;
-        margin: .4rem;
-        background: $dave-gray-200;
-        color: $dave-gray-600;
-        font-weight: 400;
-        font-size: $dave-typo-9;
-        border: 0;
-
-        &:hover {
-          background: $dave-gray-300;
-        }
-
-        .vs__deselect {
-          margin-left: 1rem;
-        }
-      }
-    }
-
-  }
-
-  // select option
-  .vs__dropdown-menu {
-    background: #fff;
-    border: 1px solid $dave-primary;
-
-    &::-webkit-scrollbar {
-      width: 7px;
-      background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: $dave-gray-600;
-      border-radius: 4px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: $dave-gray-300;
-    }
-
-  }
-
-  .vs__dropdown-option {
-    padding: 14px;
-    color: $dave-gray-800;
-
-    .select-icon {
-      display: inline-block;
-      width: 20px;
-      height: 100%;
-      margin-left: 10px;
-      text-indent: -9999px;
-    }
-  }
-
-  .vs__dropdown-option--selected,
-  .vs__dropdown-option--highlight {
-    background-color: $dave-purple-100;
-  }
-
-  .vs__dropdown-option--selected {
-    .select-icon {
-      background: utilIcon(icon-check, '554BEC') no-repeat center;
-    }
-
-  }
-}
-
-// datepicker custom 
-.custom-input {
-  padding: 14px 12px 14px 45px;
-  font-size: 1.4rem;
-
-  &.dp__input_focus {
-    border: 1px solid $dave-primary;
-  }
-}
-
-.dp__input_icon {
-  left: 15px;
-}
-
-.dp__instance_calendar {
-  font-size: 1.4rem;
-}
-
-// 에디터
-.ql-snow {
-  background: white;
-}
-
-
-@media (hover: hover) {
-  a:hover {
-    color: hsla(160, 100%, 37%, 1);
-  }
-}
-
-:root {
-
-  --vt-nav-height: 6rem;
-  --screen-max-width: 1280px;
-
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
-
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
-
-  --vt-c-indigo: #2c3e50;
-
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-
-  --vt-point-color: hsla(160, 100%, 37%, 1);
-}
-
-/* semantic color variables for this project */
-:root {
-  /* --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1); */
-
-  --section-gap: 160px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    /* --color-border-hover: var(--vt-c-divider-dark-1); */
-    --color-border-hover: var(--vt-c-white-soft);
-
-
-    --color-heading: var(--vt-c-text-dark-1);
-    /* --color-text: var(--vt-c-text-dark-2); */
-    --color-text: var(--vt-c-white-soft);
-  }
-}
 
 *,
 *::before,
@@ -471,7 +87,7 @@ body {
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
   font-family: 'Pretendard', sans-serif;
-  font-size: 1.4rem;
+  font-size: var(--normal-font-size);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -481,26 +97,70 @@ input {
   background-color: var(--color-background);
 }
 
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+.container {
+  padding: var(--padding-basic);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--black);
+    --color-background-soft: var(--black-soft);
+    --color-background-mute: var(--black-mute);
+
+    --color-border: var(--divider-dark-2);
+    --color-border-hover: var(--white-soft);
+
+    --color-heading: var(--text-dark-1);
+    --color-text: var(--white-soft);
+  }
+}
+
 [data-theme="light"] {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
+  --color-background: var(--white);
+  --color-background-soft: var(--white-soft);
+  --color-background-mute: var(--white-mute);
 
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-black-soft);
+  --color-border: var(--divider-light-2);
+  --color-border-hover: var(--black-soft);
 
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-heading: var(--text-light-1);
+  --color-text: var(--text-light-1);
 }
 
 [data-theme="dark"] {
-  --color-background: var(--vt-c-black);
-  --color-background-soft: var(--vt-c-black-soft);
-  --color-background-mute: var(--vt-c-black-mute);
+  --color-background: var(--black);
+  --color-background-soft: var(--black-soft);
+  --color-background-mute: var(--black-mute);
 
-  --color-border: var(--vt-c-divider-dark-2);
-  --color-border-hover: var(--vt-c-white-soft);
+  --color-border: var(--divider-dark-2);
+  --color-border-hover: var(--white-soft);
 
-  --color-heading: var(--vt-c-text-dark-1);
-  --color-text: var(--vt-c-white-soft);
+  --color-heading: var(--text-dark-1);
+  --color-text: var(--white-soft);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: hsla(160, 100%, 37%, 1);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --padding-basic: 3.2rem;
+  }
 }
