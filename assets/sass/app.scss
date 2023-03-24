@@ -91,6 +91,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+  overflow-x: hidden;
 }
 
 input {
@@ -115,11 +117,19 @@ h3 {
   padding: var(--padding-basic);
 }
 
+code {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--gray);
+  border-radius: 3px;
+  font-size: var(--small-font-size);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--black);
     --color-background-soft: var(--black-soft);
     --color-background-mute: var(--black-mute);
+    --color-background-reversal: var(--black-soft);
 
     --color-border: var(--divider-dark-2);
     --color-border-hover: var(--white-soft);
@@ -133,6 +143,7 @@ h3 {
   --color-background: var(--white);
   --color-background-soft: var(--white-soft);
   --color-background-mute: var(--white-mute);
+  --color-background-reversal: var(--black-soft);
 
   --color-border: var(--divider-light-2);
   --color-border-hover: var(--black-soft);
@@ -145,6 +156,7 @@ h3 {
   --color-background: var(--black);
   --color-background-soft: var(--black-soft);
   --color-background-mute: var(--black-mute);
+  --color-background-reversal: var(--black-soft);
 
   --color-border: var(--divider-dark-2);
   --color-border-hover: var(--white-soft);
@@ -156,6 +168,7 @@ h3 {
 @media (hover: hover) {
   a:hover {
     color: hsla(160, 100%, 37%, 1);
+    cursor: none;
   }
 }
 
