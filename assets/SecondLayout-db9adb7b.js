@@ -1,1 +1,0 @@
-import{_ as t,P as s}from"./Footer-47225bc6.js";import{c as a,b as e,a as c,o as _,e as n}from"./index-fe9787f5.js";const r={class:"second-layout flex flex-col"},l={class:"container flex grow mx-auto"},f={__name:"SecondLayout",setup(u){return(i,d)=>{const o=n("RouterView");return _(),a("div",r,[e(t),c("div",l,[e(o,{class:"w-full"})]),e(s)])}}};export{f as default};

@@ -150,12 +150,13 @@ code {
 ul,
 ol {
   padding-left: 2.5rem;
+
   li {
     &::marker {
       list-style: decimal;
     }
 
-    & + li {
+    &+li {
       margin-top: 0.5rem;
     }
   }
@@ -201,6 +202,22 @@ figure {
     --color-heading: var(--text-dark-1);
     --color-text: var(--white-soft);
     --color-text-reversal: var(--black);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: var(--white);
+    --color-background-soft: var(--white-soft);
+    --color-background-mute: var(--white-mute);
+    --color-background-reversal: var(--black);
+
+    --color-border: var(--divider-light-2);
+    --color-border-hover: var(--black-soft);
+
+    --color-heading: var(--text-light-1);
+    --color-text: var(--text-light-1);
+    --color-text-reversal: var(--white);
   }
 }
 
