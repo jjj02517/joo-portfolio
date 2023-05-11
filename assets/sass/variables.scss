@@ -4,27 +4,32 @@
 
   --white: #ffffff;
   --white-soft: #f8f8f8;
-  --white-mute: #f2f2f2;
+  --white-mute: #F8F9FA;
 
   --black: #121212;
   --black-soft: #222222;
-  --black-mute: #282828;
+  --black-mute: #1E1E1E;
 
   --indigo: #2c3e50;
 
   --gray: rgba(190, 197, 204, 0.5);
   --gray-2: rgba(190, 197, 204, 0.2);
 
+  --border-light-3: #DEE2E6;
+  --border-black-3: #4D4D4D;
+
+
   --divider-light-1: rgba(60, 60, 60, 0.29);
   --divider-light-2: rgba(60, 60, 60, 0.12);
   --divider-dark-1: rgba(84, 84, 84, 0.65);
   --divider-dark-2: rgba(84, 84, 84, 0.48);
 
-  // --text-light-1: var(--indigo);
   --text-light-1: var(--black);
-  --text-light-2: rgba(60, 60, 60, 0.66);
+  --text-light-2: #495057;
+  --text-light-3: #212529;
   --text-dark-1: var(--white);
-  --text-dark-2: rgba(235, 235, 235, 0.64);
+  --text-dark-2: #D9D9D9;
+  --text-dark-3: #ECECEC;
 
   --point-color: #ffc800;
   // --point-color: hsla(160, 100%, 37%, 1);
