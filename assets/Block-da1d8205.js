@@ -1,1 +1,0 @@
-import{_ as o,o as c,c as n,a as s,H as t}from"./index-75412e07.js";const _={},a={class:"common-block-component my-2"},r={class:"content"};function d(e,l){return c(),n("div",a,[s("div",r,[t(e.$slots,"inner",{},void 0,!0)])])}const m=o(_,[["render",d],["__scopeId","data-v-3068b6b8"]]);export{m as C};
